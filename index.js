@@ -230,11 +230,18 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 function annoyingSong(){
-        for (let i = 5 ; i > 0; i--){
-          console.log('${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall');
-        }
+  let word = "bottles";
+  let count = 99;
+  while (count > 0) {
+    var bottle = count == 1 ? "bottle" : "bottles";
+    console.log(count + " " + word + " of soda on the wall,");
+    console.log(count + " " + word + " of soda,");
+    console.log("Take one down pass it around");
+    --count;
+    var bottle = count == 1 ? "bottle" : "bottles";
+    console.log(count + " " + word + " of soda on the wall");
+}
   }
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
