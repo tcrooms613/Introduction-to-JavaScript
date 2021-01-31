@@ -229,6 +229,8 @@ Using the annoyingSong function below do the following:
   2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
+
+
 function annoyingSong(){
   let word = "bottles";
   let count = 99;
@@ -257,10 +259,27 @@ Using the grade function below do the following:
    60-69 should return 'you got a D'
    below should return 'you got an F'
 */
-  
-function grade(/*Your Code here */){
-  /*Your Code here */
+
+let value = Math.round(Math.random() * 10);
+
+function grade(value){
+ 
+  if (value >= 0 && value < 60) { // 0-59 F
+    return 'you got an F';
   }
+  else if (value >= 60 && value < 70) { // 60-69 D
+    return 'you got a D';
+  }
+  else if (value >= 70 && value < 80) { // 70-79 C
+    return 'you got a C';
+  }
+  else if (value >= 80 && value < 90) { // 80-89 B
+    return 'you got a B';
+  }
+  else if (value >= 90) { // 90-100 A
+    return 'you got an A';
+  }
+}
   
   
 
