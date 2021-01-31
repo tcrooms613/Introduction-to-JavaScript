@@ -112,30 +112,30 @@ Use the hungryDog function and feeding requirements below to do the following:
 
 function hungryDog(weight, age){
   // Puppies Less Than a month calculations
-  if (age >= 0.16 && age < 0.33) {
+  if (age >= 0.16 && age < 0.33) { // 2-4 months
       return weight * 0.1; 
     }
-    else if (age >= 0.33 && age < 0.58) {
+    else if (age >= 0.33 && age < 0.58) { // 4-7 months
         return weight * 0.05;
       }
-    else if (age >= 0.58 && age < 1) {
+    else if (age >= 0.58 && age < 1) { // 7-12 months
       return weight * 0.04;
     }
     // Dogs Year or Greater in age Calculations
-    else if (weight < 6) {
+    else if (weight < 6) { // Up to 5 pounds
       return weight * 0.05;
     }
-    else if (weight >= 6 && weight < 11){
+    else if (weight >= 6 && weight < 11){ // 6-10 pounds
       return weight * .04;
     }
-    else if (weight >= 11 && weight < 16) {
+    else if (weight >= 11 && weight < 16) { // 11-15 pounds
       return weight * 0.03;
     }
-    else if (weight > 15) {
+    else if (weight > 15) { // Greater than 15 pounds
       return weight * 0.02;
     }
   }
-
+console.log(hungryDog(15,1))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -159,10 +159,36 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+const computer = Math.random();
+
 function game(user, computer){
-    /*add your code here*/
-}
-  
+  if (computer < 0.34) {
+    computer = 'rock';
+  }
+  else if (computer < 0.67) {
+    computer = 'paper';
+  }
+  else if (computer <= 1) {
+    computer = 'scissors';
+  }
+
+  if (user === computer){
+    return "it's a tie";
+  }
+
+  else if ((user === "scissors" && computer === "paper") || 
+          (user === "paper" && computer === "rock") || 
+          (user === "rock" && computer === "scissors")) {
+            return "you win!";
+  }
+  else {
+    return "you lose!"
+  }
+  }
+
+
+
+
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -176,10 +202,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return km * 0.621371;
   }
-
+console.log(miles(33));
 
 
 //Task 5b - Feet to CM
@@ -190,12 +216,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48;
   }
  
-
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Let's Sing 99 Bottles of Soda on the Wall!
@@ -205,9 +229,10 @@ Using the annoyingSong function below do the following:
   2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
-
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(){
+        for (let i = 5 ; i > 0; i--){
+          console.log('${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall');
+        }
   }
 
 
