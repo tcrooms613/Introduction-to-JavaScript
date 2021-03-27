@@ -225,8 +225,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48;
   }
  
 
@@ -262,10 +262,24 @@ Using the grade function below do the following:
    60-69 should return 'you got a D'
    below should return 'you got an F'
 */
-  
-function grade(/*Your Code here */){
-  /*Your Code here */
+  let score = Math.round(Math.random() * 10);
+function grade(score){
+  if (score >= 0 && score < 60) { // 0-59 F
+    return 'you got an F';
   }
+  else if (score >= 60 && score < 70) { // 60-69 D
+    return 'you got a D';
+  }
+  else if (score >= 70 && score < 80) { // 70-79 C
+    return 'you got a C';
+  }
+  else if (score >= 80 && score < 90) { // 80-89 B
+    return 'you got a B';
+  }
+  else if (score >= 90) { // 90-100 A
+    return 'you got an A';
+  }
+}
   
   
 
@@ -282,7 +296,7 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
+function vowelCounter() {
     /*add your code here*/
 }
 
